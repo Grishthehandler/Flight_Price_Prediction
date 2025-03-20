@@ -1,0 +1,16 @@
+artifact_uri: file:///c:/Flight_Price_Prediction/mlruns/705741478228396383/2cfadf50519f447d8dff915e1f4d919a/artifacts
+deleted_time: 1742457712595
+end_time: 1742449227792
+entry_point_name: ''
+experiment_id: '705741478228396383'
+lifecycle_stage: deleted
+run_id: 2cfadf50519f447d8dff915e1f4d919a
+run_name: bald-dolphin-274
+run_uuid: 2cfadf50519f447d8dff915e1f4d919a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1742449227665
+status: 4
+tags: []
+user_id: Gupta ji

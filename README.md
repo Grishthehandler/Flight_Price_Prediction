@@ -1,47 +1,56 @@
-# Flight Price Prediction
+# Flight Price Prediction Project
 
-This project aims to build an end-to-end solution for predicting flight ticket prices based on various factors such as departure time, source, destination, and airline type. The solution involves data processing, feature engineering, model training, and deployment in a Streamlit application.
+## 📌 Project Overview
+This project aims to predict flight ticket prices based on multiple factors such as departure time, source, destination, and airline type. The prediction model helps in travel planning, price optimization, and trend analysis for airlines.
 
-## Table of Contents
-- [Introduction](#introduction)
-- [Dataset](#dataset)
-- [Data Processing](#data-processing)
-- [Feature Engineering](#feature-engineering)
-- [Model Training](#model-training)
-- [Model Deployment](#model-deployment)
-- [Usage](#usage)
-- [Conclusion](#conclusion)
+## 🏗️ Project Workflow
+1. **Data Preprocessing**  
+   - Cleaned and handled missing values.
+   - Encoded categorical variables.
+   - Feature engineering was applied to extract useful features.
+   
+2. **Exploratory Data Analysis (EDA)**  
+   - Checked for correlation using a heatmap.
+   - Visualized the distribution of different features.
+   - Identified outliers and patterns in flight prices.
 
-## Introduction
-Flight ticket prices can vary significantly based on multiple factors. This project aims to predict flight prices using a regression model trained on historical data. The final model is deployed in a Streamlit application, allowing users to input various filters and get a predicted price for their flight.
+3. **Feature Selection**  
+   - **Correlation Check**: Removed features with low correlation to the target variable.
+   - **Recursive Feature Elimination (RFE)**: Used to iteratively remove the least important features.
+   - **Tree-Based Feature Importance**: Applied Random Forest to identify significant features.
+   - **SHAP Values (Optional)**: Verified feature contributions.
 
-## Dataset
-The dataset used for this project contains historical flight data, including features such as departure time, source, destination, and airline type. The dataset is preprocessed and cleaned before being used for model training.
+4. **Model Selection & Training**  
+   - Implemented and evaluated the following models:
+     - **Linear Regression**
+     - **Random Forest Regressor**
+     - **XGBoost Regressor**
+   - Tuned hyperparameters using RandomizedSearchCV.
+   - Compared model performances using MAE, MSE, RMSE, and R² scores.
+   
+5. **Model Comparison Results**  
+   - **Random Forest Regressor**
+     - R² Score: 0.8186
+     - RMSE: 1944.54
+   - **XGBoost Regressor** (Best performing model)
+     - R² Score: 0.8276
+     - RMSE: 1895.78
+   
+6. **MLflow Integration**  
+   - Logged model parameters, metrics, and artifacts.
+   - Versioned models for better tracking.
 
-## Data Processing
-Data processing involves:
-- Handling missing values
-- Encoding categorical variables
-- Normalizing numerical features
+7. **Deployment Using Streamlit**  
+   - Built an interactive web app.
+   - Integrated the best-performing model (XGBoost) using MLflow.
+   - Allowed users to input flight details and predict prices dynamically.
+   
+## 🔑 Key Features Used for Prediction
+- **Flight details**: Total Stops, Duration, Departure and Arrival times.
+- **Date information**: Journey day and month.
+- **Airline Type**: IndiGo, Air India, Jet Airways, SpiceJet, etc.
+- **Source & Destination Cities**: Chennai, Delhi, Kolkata, Mumbai, Bangalore.
 
-## Feature Engineering
-Feature engineering includes:
-- Extracting date and time features
-- Creating new features based on domain knowledge
-- Selecting important features for model training
 
-## Model Training
-A regression model is trained using the processed and engineered features. Various regression algorithms are evaluated, and the best-performing model is selected based on performance metrics.
+🚀 **Conclusion:** This project successfully predicts flight prices with high accuracy using machine learning models, ensuring better decision-making for travelers and airline companies.
 
-## Model Deployment
-The trained model is deployed in a Streamlit application. The app allows users to input filters such as route, time, and date to get a predicted flight price.
-
-## Usage
-To use the Streamlit application:
-1. Clone the repository
-2. Install the required dependencies
-3. Run the Streamlit app using the command: `streamlit run app.py`
-4. Input the desired filters and get the predicted flight price
-
-## Conclusion
-This project demonstrates an end-to-end solution for predicting flight ticket prices. The model can help users make informed decisions when booking flights by providing price predictions based on various factors.

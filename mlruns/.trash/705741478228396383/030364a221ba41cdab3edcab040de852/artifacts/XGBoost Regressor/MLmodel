@@ -1,0 +1,13 @@
+artifact_path: XGBoost Regressor
+flavors:
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.6.1
+mlflow_version: 2.21.0
+model_size_bytes: 66
+model_uuid: 850da3edc160414d96b01de61d5583a0
+prompts: null
+run_id: 030364a221ba41cdab3edcab040de852
+utc_time_created: '2025-03-20 05:53:05.983823'

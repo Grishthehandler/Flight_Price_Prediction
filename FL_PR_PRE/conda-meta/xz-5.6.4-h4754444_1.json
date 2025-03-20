@@ -250,7 +250,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "C:/b/abs_127uq9r7f9/croot/xz_1739468293592/_h_env",
         "sha256": "dbe3494f7db3697dfd6167eb9f44b211b58df9613a8f6b2670a1d6ba78f0593b",
-        "sha256_in_prefix": "b41fcece465829e6e9b9ca0f7b1c04420d9fb847f60fe84caacc5d444196715b",
+        "sha256_in_prefix": "d2288cd8e8a59c72b9979dcef4850f2bad491210eb9354fea1e4c05a4e8d9a5f",
         "size_in_bytes": 426
       },
       {
@@ -382,7 +382,7 @@
     ],
     "paths_version": 1
   },
-  "requested_spec": "None",
+  "requested_spec": "xz",
   "sha256": "767a18adef86909bb374379add4784879d950a49ce2f7502444fd177b43fae33",
   "size": 286358,
   "subdir": "win-64",

@@ -1,5 +1,21 @@
 pandas
+# it is used for Data manupulation
 numpy
+# it is used for numerical calculations
 matplotlib
+# it is used for data visualization
 seaborn
+# it is used for data visualization
 plotly.express
+# it is used for data visualization
+scikit-learn
+# it is used for machine learning
+xgboost
+# it is used for machine learning
+shap
+# it is used for machine learning
+joblib
+# it is used for saving the model
+mlflow
+# it is used for tracking the model
+streamlit

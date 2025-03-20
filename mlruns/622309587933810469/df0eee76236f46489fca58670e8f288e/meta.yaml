@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Flight_Price_Prediction/mlruns/622309587933810469/df0eee76236f46489fca58670e8f288e/artifacts
+end_time: 1742457597600
+entry_point_name: ''
+experiment_id: '622309587933810469'
+lifecycle_stage: active
+run_id: df0eee76236f46489fca58670e8f288e
+run_name: adorable-conch-681
+run_uuid: df0eee76236f46489fca58670e8f288e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1742457575158
+status: 3
+tags: []
+user_id: Gupta ji

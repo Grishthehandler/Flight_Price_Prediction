@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Flight_Price_Prediction/mlruns/622309587933810469/204d6cc276de4fae8f4e1e1a75898646/artifacts
+end_time: 1742457615209
+entry_point_name: ''
+experiment_id: '622309587933810469'
+lifecycle_stage: active
+run_id: 204d6cc276de4fae8f4e1e1a75898646
+run_name: unleashed-mare-151
+run_uuid: 204d6cc276de4fae8f4e1e1a75898646
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1742457597614
+status: 3
+tags: []
+user_id: Gupta ji

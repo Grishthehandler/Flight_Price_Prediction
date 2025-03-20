@@ -1,0 +1,16 @@
+artifact_uri: file:///c:/Flight_Price_Prediction/mlruns/705741478228396383/030364a221ba41cdab3edcab040de852/artifacts
+deleted_time: 1742457712595
+end_time: 1742450001905
+entry_point_name: ''
+experiment_id: '705741478228396383'
+lifecycle_stage: deleted
+run_id: 030364a221ba41cdab3edcab040de852
+run_name: rambunctious-owl-216
+run_uuid: 030364a221ba41cdab3edcab040de852
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1742449985479
+status: 3
+tags: []
+user_id: Gupta ji

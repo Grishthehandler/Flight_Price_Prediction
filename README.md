@@ -4,7 +4,6 @@
 ![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Scikit--Learn%20%7C%20XGBoost-orange?logo=scikit-learn)
 ![Streamlit](https://img.shields.io/badge/Streamlit-Data%20App-red?logo=streamlit)
 ![MLflow](https://img.shields.io/badge/MLflow-Tracking%20%26%20Registry-4B0082?logo=mlflow)
-![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
 ---
 

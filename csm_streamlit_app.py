@@ -93,5 +93,5 @@ if st.sidebar.button("Predict Satisfaction"):
     else:
         st.error("Prediction: Customer is **Not Satisfied**")
 
-    st.subheader("🧾 Features Sent to the Model")
+    st.subheader(" Features Sent to the Model")
     st.write(input_df)

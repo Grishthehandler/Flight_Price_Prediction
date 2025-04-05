@@ -19,3 +19,5 @@ joblib
 mlflow
 # it is used for tracking the model
 streamlit
+
+nbformat>=4.2.0 # to use the plotly we need the nbformat>=4.2

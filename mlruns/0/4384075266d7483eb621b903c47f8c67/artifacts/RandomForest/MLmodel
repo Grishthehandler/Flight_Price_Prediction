@@ -1,0 +1,45 @@
+artifact_path: RandomForest
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.10.16
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.6.1
+is_signature_from_type_hint: false
+mlflow_version: 2.21.0
+model_size_bytes: 21935626
+model_uuid: 19c291ab850141b882c1cf9335f2f000
+prompts: null
+run_id: 4384075266d7483eb621b903c47f8c67
+signature:
+  inputs: '[{"type": "double", "name": "Age", "required": true}, {"type": "long",
+    "name": "Class", "required": true}, {"type": "double", "name": "Flight Distance",
+    "required": true}, {"type": "double", "name": "Inflight wifi service", "required":
+    true}, {"type": "double", "name": "Departure/Arrival time convenient", "required":
+    true}, {"type": "double", "name": "Ease of Online booking", "required": true},
+    {"type": "long", "name": "Gate location", "required": true}, {"type": "double",
+    "name": "Food and drink", "required": true}, {"type": "long", "name": "Online
+    boarding", "required": true}, {"type": "double", "name": "Seat comfort", "required":
+    true}, {"type": "long", "name": "On-board service", "required": true}, {"type":
+    "double", "name": "Leg room service", "required": true}, {"type": "double", "name":
+    "Baggage handling", "required": true}, {"type": "double", "name": "Checkin service",
+    "required": true}, {"type": "double", "name": "Inflight service", "required":
+    true}, {"type": "double", "name": "Cleanliness", "required": true}, {"type": "double",
+    "name": "Total Delay", "required": true}, {"type": "double", "name": "Service
+    Quality Index", "required": true}, {"type": "long", "name": "Frequent Flyer",
+    "required": true}, {"type": "long", "name": "On-Time Flight", "required": true},
+    {"type": "long", "name": "Gender_Male", "required": true}, {"type": "long", "name":
+    "Customer Type_disloyal Customer", "required": true}, {"type": "long", "name":
+    "Type of Travel_Personal Travel", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-04-05 01:43:29.071307'

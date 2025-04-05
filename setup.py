@@ -33,7 +33,7 @@ def get_requirements(file_path: str) -> List[str]:
 
 
 setup(
-name = 'Flight_Price_Predictions',
+name = 'Flight_Price_Predictions & Customer_Satisfaction_Predictions',
 version='0.0.1',
 author="Grish Kumar Gupta",
 author_email="gupta.grish03@gmail.com",

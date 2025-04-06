@@ -27,8 +27,8 @@ A machine learning classification project that predicts whether an airline custo
 ---
 
 ## 🧠 Skills Takeaway
-- Python (Pandas, NumPy, Scikit-learn, XGBoost)
-- Data Cleaning & Feature Engineering
+- Python (Pandas, NumPy, Scikit-learn, LogisticRegression, XGBoost, RandomForestClassifier)
+- Data Cleaning, Feature Engineering, Feature Scaling
 - Classification Models
 - MLflow for experiment tracking
 - Streamlit for interactive dashboards
@@ -47,16 +47,43 @@ A machine learning classification project that predicts whether an airline custo
 ## ⚙️ Project Workflow
 
 ### ✅ Step 1: Data Preprocessing
-- Handled missing values and duplicates.
-- Encoded categorical features:
-  - Label Encoding: `Class`, `Satisfaction`
-  - One-Hot Encoding: `Gender`, `Customer Type`, `Type of Travel`
+- Displa the basic information about the dataset
+- Remove unnecessary column, Handled missing values and duplicates.
+- Exploratory Data Analysis (EDA)
+- Outlier handling using the capping method (**np.where**)
 - Feature Engineering:
   - `Total Delay` = `Departure Delay + Arrival Delay`
   - `Service Quality Index` = Mean of selected service columns
+  -('Inflight wifi service', 'Ease of Online booking', 'Food and drink',        'Online   boarding','Seat comfort', 'Inflight entertainment', 'On-board service', 'Leg room service','Baggage handling', 'Checkin service', 'Inflight service', 'Cleanliness')
+  - `Frequent Flyer` = combined Customer Type	& Type of Travel	to Create Frequent Flyer feature
+  - `On-Time Flight` = When the total delay is == 0
+# Feature Scaling
+
+##  **Which Features Need Scaling?**
+| **Feature**                   | **Type**             | **Scaling Method** | **Why?** |
+|--------------------------------|----------------------|-----------------------------|----------|
+| **Age**                        | Continuous (Numeric) | StandardScaler              | Typically normally distributed, requires centering. |
+| **Flight Distance**            | Continuous (Numeric) | StandardScaler              | Varies widely, normalization helps models learn effectively. |
+| **Total Delay**                | Continuous (Numeric) | StandardScaler              | Delays can be both positive and negative, needs centering. |
+| **Service Quality Index**      | Score (0-5 range)   | MinMaxScaler                | Values already in a fixed range (0-5), keeping them between 0-1 ensures consistency. |
+| **Inflight Wifi Service**       | Ordinal (0-5 scale) | MinMaxScaler                | Scores should be normalized for fair comparison. |
+| **Departure/Arrival Convenience** | Ordinal (0-5 scale) | MinMaxScaler                | Scores should be normalized to balance their impact. |
+| **Ease of Online Booking**      | Ordinal (0-5 scale) | MinMaxScaler                | Scores should be normalized for consistent weight. |
+| **Food and Drink**              | Ordinal (0-5 scale) | MinMaxScaler                | Scores should be normalized for fair comparison. |
+| **Seat Comfort**                | Ordinal (0-5 scale) | MinMaxScaler                | Scores should be normalized. |
+| **Leg Room Service**            | Ordinal (0-5 scale) | MinMaxScaler                | Scores should be normalized. |
+| **Baggage Handling**            | Ordinal (0-5 scale) | MinMaxScaler                | Scores should be normalized. |
+| **Check-in Service**            | Ordinal (0-5 scale) | MinMaxScaler                | Scores should be normalized. |
+| **Inflight Service**            | Ordinal (0-5 scale) | MinMaxScaler                | Scores should be normalized. |
+| **Cleanliness**                 | Ordinal (0-5 scale) | MinMaxScaler                | Scores should be normalized. |
+
+
+  - **Encoded categorical features**:
+  - *Label Encoding*: `Class`, `Satisfaction`
+  - *One-Hot Encoding*: `Gender`, `Customer Type`, `Type of Travel`
+
 
 ### ✅ Step 2: Model Training
-- EDA to explore feature relationships
 - Trained:
   - Logistic Regression
   - Random Forest (tuned)
@@ -64,7 +91,7 @@ A machine learning classification project that predicts whether an airline custo
 
 ### ✅ Step 3: MLflow Integration
 - Logged parameters, metrics, and models
-- Registered best-performing models
+- Registered best-performing models (XGBoost)
 
 ### ✅ Step 4: Streamlit App
 - Visualized trends
@@ -102,8 +129,6 @@ A machine learning classification project that predicts whether an airline custo
 
 ## 📦 Deliverables
 
-- Preprocessing & modeling Python scripts
-- Cleaned dataset
 - Trained classification models
 - MLflow tracking + registry
 - Deployed Streamlit app
@@ -122,8 +147,12 @@ This project predicts flight ticket prices using machine learning. It considers 
 ## 🏗️ Project Workflow
 
 1. **Data Preprocessing**  
-   - Cleaned missing values and encoded categorical variables.
-   - Feature engineering applied to extract time/duration/date-based features.
+   - Display basic information about the dataset
+   - Handling Missing values
+   - Handled duplication in the dataset. (**retain only the first occurrence**)
+   - Feature Extraction = `Transforming date & time attributes `
+   - Feature importance with ExtraTreeRegressor
+   - encoded categorical variables.
 
 2. **Exploratory Data Analysis (EDA)**  
    - Correlation heatmaps
@@ -134,12 +163,11 @@ This project predicts flight ticket prices using machine learning. It considers 
    - Correlation check
    - Recursive Feature Elimination (RFE)
    - Random Forest Importance
-   - SHAP values (optional)
+   - SHAP values
 
 4. **Model Training & Evaluation**  
-   - Linear Regression
    - Random Forest Regressor
-   - XGBoost Regressor
+   - XGBoost Regressor (Tuned)
    - Used **RandomizedSearchCV** for hyperparameter tuning due to its efficiency in exploring a wide range of hyperparameters compared to **GridSearchCV**.
 
 5. **Model Comparison Results**  
@@ -161,15 +189,6 @@ This project predicts flight ticket prices using machine learning. It considers 
    - Displays dynamic price prediction
    - Integrated with MLflow backend
 
----
-
-## 🔑 Key Features Used for Prediction
-
-- **Stops**: Total stops in journey
-- **Duration**: Total duration of flight
-- **Airline**: Airline operator (e.g., IndiGo, Air India)
-- **Source & Destination**: Cities of departure and arrival
-- **Date Features**: Journey day and month
 
 ---
 
